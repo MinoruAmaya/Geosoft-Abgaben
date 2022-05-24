@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="author", content="Lena Long">
+    <meta name="description", content="My Website for Locations">
+    <link rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="map.css">
+    <script src= "point.js"> </script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+    crossorigin=""></script>
+
+    <title>My Geosoft-Website</title>
+   
+</head>
+<body onload="onLoad()", style="background-image:url(v960-ning-30.jpg)">
+ 
+  <h1 style="background-color: rgb(0, 255, 221);"> Aufgabe 4 </h1>
+  <h2 style="color: rgb(106, 0, 255);"> Web-Maps </h2>
+
+<h3> Dein Standort ist: </h3>
+
+<button onclick="getLocation()">Zeige meine Position in Map an</button>
+
+<p id="1"></p>
+
+<p> </p>
+<div id="map"></div>
+
+<script src="Leaflet.js"></script>
+
+<h3>Entfernungen der Bushaltestellen zu deinem Standort:</h3>
+
+<p id="2"></p>
+
+<br>
+  <div id="nextDepartures">
+    <p id="nextDeparturesHeader"></p>
+    <table style="width:100%" align="center" id="nextDeparturesTable">
+      <tr>
+        <th>line nr</th>
+        <th>Bus line</th>
+        <th>departure</th>
+      </tr>
+
+    </table>
+  </div>
+  <br>
+  <table style="width:75%" align="center" id="resultTable">
+    <tr>
+      <th>Bus stop name</td>
+      <th>Coordinates</td>
+      <th>Distance (in meters)</td>
+    </tr>
+  </table>
+
+  <div id="geoJSON" class="script" align="center">
+  </div>
+  <br>
+
+  </div>
+
+ <script src = "externalFile4.js"></script>
+
+<h2>Click on the Button to go to Busradar</h2>
+<script src ="https://api.busradar.conterra.de/demo/index.html">Busradar.de</script>
+
+<button onclick="document.location='https://api.busradar.conterra.de/demo/index.html'">Zum Busradar</button>
+
+
+</body>
+</html>
